@@ -130,45 +130,28 @@ void Trie::fileWrite(std::string ofname){
     std::ofstream os(ofname);
     os << "digraph G {" << std::endl << std::endl;
     node* temp = root;
-    for(int i= 0; i<temp->subs.size(); i++){
-        char Schar;
-        char Dchar;
-        bool word = false;
-        Schar = temp->subs[i]->data;
-        for(int j= 0; j < temp->subs[i]->subs.size(); j++){
-            Dchar = temp->subs[i]->subs[j]->data;
-            word = temp->subs[i]->subs[j]->word;
-            std::string color = "red";
-            if(word) color = "blue";
-            os << char(9)  << Schar << " -> " << Dchar << "[color=\"" << color << "\"];" << std::endl;
-        }
+    for(int i = 0; i< root->subs.size(); i++){
+        temp = root->subs[i];
+        print(temp);
     }
+    os << stream.rdbuf();
     os << std::endl << "}";
     os.close();
 }
 
 //public print
 void Trie::print(){
-    print(root, root->subs[0]);
+//    print(root, root->subs[0]);
 }
 
 //private print
-void Trie::print(node* rootNode, node* childNode){
-    node* temp = root;
-    for(int i= 0; i<temp->subs.size(); i++){
-        char rootDat;
-        char childDat;
-        bool word = false;
-        rootDat = temp->subs[i]->data;
-        rootNode = temp->subs[i];
-        for(int j= 0; j < temp->subs[i]->subs.size(); j++){
-            childDat = temp->subs[i]->subs[j]->data;
-            childNode = temp->subs[i]->subs[j];
-            word = temp->subs[i]->subs[j]->word;
-            std::string color = "red";
-            if(word) color = "blue";
-            std::cout << char(9) << rootDat << " -> " << childDat << "[color=\"" << color << "\"];" << std::endl;
+void Trie::print(node* rootNode){
+    if (!rootNode->subs.empty())for(int i = 0; i < rootNode->subs.size(); i++) {
+        std::string color = "red";
+        if(rootNode->subs[i]->word) color = "blue";
+        stream << char(rootNode->data) << " -> " << char(rootNode->subs[i]->data) << "[color=\"" + color << "\"];" << std::endl;
+        if(!rootNode->subs[i]->subs.empty()){
+            print(rootNode->subs[i]);
         }
     }
 }
-

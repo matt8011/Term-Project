@@ -11,10 +11,11 @@ class Trie {
 public:
     Trie();
 
-    void insert(std::string key);
-    void print(std::string ofname);
+    void insert(std::string key, int mode);
+    void fileWrite(std::string ofname);
+    void print();
 
-    bool search(int value);
+    int search(std::string value, int mode);
 
 private:
     struct node {
@@ -24,11 +25,14 @@ private:
 
         node(char data) : data(data), word(false), subs({}) {}
     };
-
+    std::stringstream stream;
     node* root;
 
-    void insert(char value, node* node);
-    int search(std::string value);
+    void print(node* rootNode);
+
+    void insert(std::string key);
+    bool strSearch(std::string value);
+    int subSearch(std::string value);
     std::string keyCheck(std::string key);
 
 
