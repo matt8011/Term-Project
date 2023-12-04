@@ -1,4 +1,4 @@
-# CSC 212 Group Final Project: Trie
+# CSC 212 Group 1 Final Project: Trie Data Structure
 *By Matt Kyle, Evan O'Neil, Jacob Pierce, and Nitish Salvi*
 
 ## Overview
