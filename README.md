@@ -21,7 +21,7 @@ This can be done by implementing articles, dictionaries, and other inputs of cha
 
 ## Compiling
 1. Download the following files from this repository: **main.cpp**, **Trie.cpp**, **Trie.h**. These are located in the **Scaffolding** folder. 
-1.a. Make sure to also download a library.
+-1.a. Make sure to also download a library.
 2. Open your IDE and navigate to the folder where you stored your files with the CLA "cd".
 3. Compile the program using this CLA: **g++ main.cpp Trie.cpp -o *prog***. (where prog is what you want your program to run as)
 4. Run the program with the following CLA: **./prog *inputFile.txt***. (where inputFile.txt is YOUR input file)
