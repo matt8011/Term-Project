@@ -2,7 +2,7 @@
 *By Matt Kyle, Evan O'Neil, Jacob Pierce, and Nitish Salvi*
 
 ## Overview
-This project utilizes a Trie to implement an autocomplete function in C++. The user will interact with this program via command line arguments (CLAs) and user inputs in a Ubuntu terminal. The following functions are implemented.
+This project utilizes a Trie to implement an autocomplete function in C++. The user will interact with this program via command-line arguments (CLAs) and user inputs in an Ubuntu terminal. The following functions are implemented:
 - Search
 - Insert
 - Print to File
