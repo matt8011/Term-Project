@@ -17,10 +17,10 @@ Run the following commands:
 **sudo apt-get update** and
 **sudo apt-get install g++**
 ### Downloading a Library
-This can be done by implementing articles, dictionaries, and other inputs of characters in a .txt format. An example text is provided in the **______ folder** named **_____.txt.**
+This can be done by implementing articles, dictionaries, and other inputs of characters in a .txt format. An example text is provided in the **Scaffolding** folder named **dictionary.txt.**
 
 ## Compiling
-1. Download the following files from this repository: **main.cpp**, **Trie.cpp**, **Trie.h**. These are located in the **blank** folder. 
+1. Download the following files from this repository: **main.cpp**, **Trie.cpp**, **Trie.h**. These are located in the **Scaffolding** folder. 
 1.a. Make sure to also download a library.
 2. Open your IDE and navigate to the folder where you stored your files with the CLA "cd".
 3. Compile the program using this CLA: **g++ main.cpp Trie.cpp -o *prog***. (where prog is what you want your program to run as)
