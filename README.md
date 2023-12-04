@@ -25,6 +25,6 @@ This can be done by implementing articles, dictionaries, and other inputs of cha
 3. Compile the program using this CLA: **g++ main.cpp Trie.cpp -o *prog***. (where prog is what you want your program to run as)
 4. Run the program with the following CLA: **./prog *inputFile.txt***. (where inputFile.txt is YOUR input file)
 5. Follow the terminal commands.
-## Debugging
+## Debugging and Troubleshooting
 
 ## Example Inputs and Outputs
