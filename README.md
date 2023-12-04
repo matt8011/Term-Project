@@ -26,5 +26,11 @@ This can be done by implementing articles, dictionaries, and other inputs of cha
 4. Run the program with the following CLA: **./prog *inputFile.txt***. (where inputFile.txt is YOUR input file)
 5. Follow the terminal commands.
 ## Debugging and Troubleshooting
+### Unexpected Outputs for Autocomplete:
+lorem ipsum
+### "Search Yielded No Results":
+lorem ipsum
+### "Autocomplete Yielded No Results":
+lorem ipsum
 
 ## Example Inputs and Outputs
