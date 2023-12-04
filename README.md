@@ -10,13 +10,13 @@ This project utilizes a Trie to implement an autocomplete function in C++. The u
   
 # Setup
 This program requires C++ to run alongside Ubuntu to test the program. 
-## Installing an IDE
+### Installing an IDE
 To properly run this program, an IDE should be installed. A few local IDEs we recommend are *CLion* and *VSCode*. If you are unable to utilize a local IDE then you can use *cs50.dev* as an Online IDE.
-## Installing g++
+### Installing g++
 Run the following commands:
 **sudo apt-get update** and
 **sudo apt-get install g++**
-## Downloading a Library
+### Downloading a Library
 This can be done by implementing articles, dictionaries, and other inputs of characters in a .txt format. An example text is provided in the **______ folder** named **_____.txt.**
 
 # Compiling
