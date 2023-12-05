@@ -51,10 +51,19 @@ There were no words begining with law, so the output showed words begining with 
 To commit to a user-friendly application, our code displayes a menu with options before and after every action made by the user, until the user quits the application. There are a wide range of options to choose from and many separate menus that will appear.
 
 - **First Menu**
+- <img width="399" alt="Screen Shot 2023-12-04 at 10 16 29 PM" src="https://github.com/matt8011/Term-Project/assets/123590351/95b46caf-34a3-4683-b3f4-569c0f87c31c">
+
 - **Choice of Continuation**
+- <img width="275" alt="Screen Shot 2023-12-04 at 10 18 50 PM" src="https://github.com/matt8011/Term-Project/assets/123590351/deec0517-8f37-409a-bebd-1ea2bc10b45b">
+
 - **Access File or Input Options**
-- **File Editing Options**<img width="341" alt="Screen Shot 2023-10-24 at 5 36 26 PM" src="https://github.com/matt8011/Term-Project/assets/123590351/9b3b9f63-ce27-483f-9b3a-042960c5d3c9">
+- <img width="246" alt="Screen Shot 2023-12-04 at 10 19 09 PM" src="https://github.com/matt8011/Term-Project/assets/123590351/05ad6b3b-3ae1-4f6e-8bd0-ad5009e23e60">
+
+- **File Editing Options**
+- <img width="174" alt="Screen Shot 2023-12-04 at 10 19 23 PM" src="https://github.com/matt8011/Term-Project/assets/123590351/693d5e40-a092-4641-9b72-f95d606680f6">
 
 - **Adding/Searching/Autocompletion Options**
+- <img width="188" alt="Screen Shot 2023-12-04 at 10 24 44 PM" src="https://github.com/matt8011/Term-Project/assets/123590351/58f8b2ff-3d81-4243-8ca2-7981bd5add89">
+
 
 
