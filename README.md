@@ -29,6 +29,7 @@ This can be done by putting articles, dictionaries, and texts into a .txt file. 
 ### Unexpected Outputs for Autocomplete:
 The autocomplete system has two features that may appear as errors.
   - "The input text is a complete word"
+
 If this message is appears in an autocomplete text file, the input text matches a complete word in the dictionary
 ### "Search Yielded No Results":
 lorem ipsum
