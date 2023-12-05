@@ -37,11 +37,8 @@ The output file lists a bunch of completed words, but they don't start with your
 For example:
 
   	law [la] :
-   
 	ladder
- 
 	lady
- 
 	lamp
 
 ### "Search Yielded No Results":
