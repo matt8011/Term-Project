@@ -147,7 +147,7 @@ std::vector<std::string> Trie::autoComp(std::string val) {
         //if the char doesn't exist in the tree
         if(!found){
             valdex = i;
-            if(i == 0) return {};
+            if(i == 0) return {""};
             break;
         }
     }
