@@ -46,5 +46,12 @@ There were no words begining with law, so the output showed words begining with 
 
 ## Example Inputs and Outputs
 
--**"Menu Selections":** //Something
+### Menu Selection
+
+- **First Menu**
+- **Choice of Continuation**
+- **Access File or Input Options**
+- **File Editing Options**
+- **Adding/Searching/Autocompletion Options**
+
 
