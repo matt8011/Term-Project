@@ -1,5 +1,5 @@
 #include <iostream>
-#include "Trie.h"
+#include "trie.h"
 
 
 
@@ -9,8 +9,8 @@ int main(int argc, char* argv[]) {
     std::string secfname;
 
     std::string ofname = ifname.substr(0, ifname.rfind('.')) + "_output";
-    std::cout << "Input file name: " << ifname  << std::endl;
-    std::cout << "Output file name: " << ofname << "#_mode.dot" << std::endl<< std::endl;
+    std::cout << "Input File Name: " << ifname  << std::endl;
+    std::cout << "Output File Name: " << ofname << "#_mode.dot" << std::endl<< std::endl;
     Trie tree;
 
     //infinite menu
@@ -24,11 +24,11 @@ int main(int argc, char* argv[]) {
         std::string menuChoice;
         bool user = false;
         bool oldFile = true;
-        std::cout << "What would you like to do" ;
+        std::cout << "What Action Would You Like To Perform" ;
         if(secondRound){
             std::cout << "?: " << std::endl;
-            std::cout << "0: file stuff" << std::endl;
-            std::cout << "1: user input stuff" << std::endl;
+            std::cout << "0: Edit File" << std::endl;
+            std::cout << "1: Perform Action On Tree" << std::endl;
             std::cout << "Type 0, or 1: ";
             menuChoice.clear();
             std::cin >> menuChoice;
@@ -48,8 +48,8 @@ int main(int argc, char* argv[]) {
             std::cout << std::endl;
             if(menuChoice == "0"){
                 std::cout << "FILE OPTIONS:" << std::endl;
-                std::cout << "0: use the input file" << std::endl;
-                std::cout << "1: use a new file" << std::endl;
+                std::cout << "0: Use Existing File" << std::endl;
+                std::cout << "1: Use New File" << std::endl;
                 std::cout << "Type 0, or 1: ";
                 std::string fileChoice;
                 fileChoice.clear();
@@ -70,26 +70,28 @@ int main(int argc, char* argv[]) {
                 std::cout << std::endl;
                 if(fileChoice == "1"){
                     oldFile = false;
-                    std::cout << "file name: ";
+                    std::cout << "New File Name: ";
                     std::cin >> secfname;
                     std::cout << std::endl;
                 }
-                std::cout << "What would you like to do with your file?" << std::endl;
+                std::cout << "NEW FILE OPTIONS: " << std::endl;
             }
             else if(menuChoice == "1"){
                 std::cout << "USER OPTIONS:" << std::endl;
                 user = true;
             }
             menuChoice.clear();
-        }else std::cout << " with your input file?: " << std::endl;
+        }else std::cout << " On Your Input File?: " << std::endl;
 
         std::cout << "0: ";
-        if(secondRound) std::cout << "add to the tree" << std::endl;
-        else std::cout << "fill the tree"<< std::endl;
-        std::cout << "1: search ";
-        if(secondRound) std::cout << "the tree" << std::endl;
-        else std::cout << "a prefilled tree" << std::endl;
-        std::cout << "2: autocomplete text" << std::endl;
+        if(secondRound) std::cout << "Add Word To The Tree" << std::endl;
+        else std::cout << "Fill The Tree"<< std::endl;
+        std::cout << "1: Search ";
+        if(secondRound) std::cout << "The Tree" << std::endl;
+        else std::cout << "A Prefilled Tree" << std::endl;
+        std::cout << "2: Autocomplete Text" << std::endl;
+        std::cout << "Q: Quit Program" << std::endl << std::endl;
+
         std::cout << "Type 0, 1, or 2: ";
         menuChoice.clear();
         std::cin >> menuChoice;
@@ -103,7 +105,7 @@ int main(int argc, char* argv[]) {
                 break;
             }
             if (menuChoice == "Q" || menuChoice == "q") return 0;
-            if(first)std::cout << "If you'd like to quit Type Q" << std::endl;
+            if(first)std::cout << "Type Q To Quit" << std::endl;
             std::cout << "Type 0, 1, or 2: ";
             menuChoice.clear();
             std::cin >> menuChoice;
@@ -115,19 +117,19 @@ int main(int argc, char* argv[]) {
         if(secondRound && user) {
             //fill
             if (std::stoi(menuChoice) == 0) {
-                std::cout << "Type whatever word(s) you want in the tree: " << std::endl;
+                std::cout << "Type Word(s) To Add To Tree: " << std::endl;
             }
 
             //search
             if (std::stoi(menuChoice) == 1) {
-                std::cout << "Type whatever word(s) you want to be searched: " << std::endl;
+                std::cout << "Type Word(s) To Be Searched: " << std::endl;
             }
 
             //auto
             if (std::stoi(menuChoice) == 2) {
-                std::cout << "Type whatever word(s) you want to be completed: " << std::endl;
+                std::cout << "Type Word(s) To Be Autocompleted: " << std::endl;
             }
-            std::cout << R"(Type one word per line ["\exit" to exit] )" << std::endl;
+            std::cout << R"(Type One Word Per Line ["\exit" to exit] )" << std::endl;
             std::string word;
             while(std::cin >> word){
                 if(word == "\\exit") break;
@@ -150,12 +152,12 @@ int main(int argc, char* argv[]) {
                 line = userString;
                 tree.insert(line);
             }else while (std::getline(ifs, line)) {
-                if(line.empty())continue;
+                    if(line.empty())continue;
 
-                //fill tree
-                tree.insert(line);
-            }
-            std::cout << "The tree is filled!" << std::endl;
+                    //fill tree
+                    tree.insert(line);
+                }
+            std::cout << "The Tree Is Filled!" << std::endl;
             //creat DOT file
             if(!secondRound)tree.fileWrite(ofname + "_fill.dot");
             else{
@@ -188,36 +190,36 @@ int main(int argc, char* argv[]) {
                 }
 //                outy.emplace_back(line, tree.strSearch(line));
             }else while (std::getline(ifs, line)) {
-                if(line.empty())continue;
+                    if(line.empty())continue;
 
-                //If there are multiple words in the input string
-                //this calls insert for each individual word in the string
-                bool many = false;
-                for (int i = 0; i < line.size(); i++) {
-                    if (line[i] == ' ') {
-                        many = true;
-                        break;
+                    //If there are multiple words in the input string
+                    //this calls insert for each individual word in the string
+                    bool many = false;
+                    for (int i = 0; i < line.size(); i++) {
+                        if (line[i] == ' ') {
+                            many = true;
+                            break;
+                        }
                     }
-                }
-                //if there are multiple words in the string{
-                if (many) {
-                    std::string str;
-                    //storing the string in a string stream lends to easy traversal
-                    std::stringstream ss(line);
-                    while (ss >> str) {
-                        if (str[str.size() - 1] == ',' || str[str.size() - 1] == '.')
-                            str = str.substr(0, str.size() - 1);
-                        outy.emplace_back(str, tree.strSearch(str.substr(0, str.size())));
+                    //if there are multiple words in the string{
+                    if (many) {
+                        std::string str;
+                        //storing the string in a string stream lends to easy traversal
+                        std::stringstream ss(line);
+                        while (ss >> str) {
+                            if (str[str.size() - 1] == ',' || str[str.size() - 1] == '.')
+                                str = str.substr(0, str.size() - 1);
+                            outy.emplace_back(str, tree.strSearch(str.substr(0, str.size())));
+                        }
                     }
-                }
-                    //if there aren't multiple words in the string{
-                else outy.emplace_back(line, tree.strSearch(line));
-            }bool filesGood = true;
+                        //if there aren't multiple words in the string{
+                    else outy.emplace_back(line, tree.strSearch(line));
+                }bool filesGood = true;
             if(outy.empty() || outy[0].first.empty()){
                 for(int i = 0; i < outy.size(); i++){
                     if(!outy[i].first.empty()) break;
                 }
-                std::cout << "autocomplete yielded no results"<< std::endl;
+                std::cout << "Autocomplete Yielded No Results"<< std::endl;
                 filesGood = false;
             }
             if(filesGood) {
@@ -227,7 +229,7 @@ int main(int argc, char* argv[]) {
                     if (user) ForU = "_by_user";
                     tree.searchFileWrite(ofname + std::to_string(iterations) + ForU + "_search.txt", outy);
                 }
-                std::cout << "The tree has been searched!" << std::endl;
+                std::cout << "The Tree Has Been Searched!" << std::endl;
             }
         }
 
@@ -245,38 +247,38 @@ int main(int argc, char* argv[]) {
                     outy.emplace_back(str, (tree.autoComp(str)));
                 }
             }else while (std::getline(ifs, line)) {
-                if(line.empty())continue;
+                    if(line.empty())continue;
 
-                //If there are multiple words in the input string
-                //this calls insert for each individual word in the string
-                bool many = false;
-                for (int i = 0; i < line.size(); i++) {
-                    if (line[i] == ' ') {
-                        many = true;
-                        break;
+                    //If there are multiple words in the input string
+                    //this calls insert for each individual word in the string
+                    bool many = false;
+                    for (int i = 0; i < line.size(); i++) {
+                        if (line[i] == ' ') {
+                            many = true;
+                            break;
+                        }
                     }
-                }
-                //if there are multiple words in the string{
-                if (many) {
-                    std::string str;
-                    //storing the string in a string stream lends to easy traversal
-                    std::stringstream ss(line);
-                    while (ss >> str) {
-                        if (str[str.size() - 1] == ',' || str[str.size() - 1] == '.')
-                            str = str.substr(0, str.size() - 1);
-                        outy.emplace_back(str.substr(0, str.size()), (tree.autoComp(str.substr(0, str.size()))));
+                    //if there are multiple words in the string{
+                    if (many) {
+                        std::string str;
+                        //storing the string in a string stream lends to easy traversal
+                        std::stringstream ss(line);
+                        while (ss >> str) {
+                            if (str[str.size() - 1] == ',' || str[str.size() - 1] == '.')
+                                str = str.substr(0, str.size() - 1);
+                            outy.emplace_back(str.substr(0, str.size()), (tree.autoComp(str.substr(0, str.size()))));
+                        }
                     }
-                }
-                    //if there aren't multiple words in the string{
-                else outy.emplace_back(line, (tree.autoComp(line)));
-            }bool filesGood = true;
+                        //if there aren't multiple words in the string{
+                    else outy.emplace_back(line, (tree.autoComp(line)));
+                }bool filesGood = true;
             if(outy.empty() || outy[0].second[0].empty()){
                 for(int i = 0; i < outy.size(); i++){
                     for(int j = 0; j < outy[i].second.size(); j++){
                         if(!outy[i].second[j].empty()) break;
                     }
                 }
-                std::cout << "autocomplete yielded no results"<< std::endl;
+                std::cout << "Autocomplete Yielded No Results"<< std::endl;
                 filesGood = false;
             }
             if(filesGood){
@@ -287,13 +289,13 @@ int main(int argc, char* argv[]) {
                     tree.autoFileWrite(ofname + std::to_string(iterations) + ForU + "_comp.txt", outy);
                 }
 
-                std::cout << "The text is complete!" << std::endl;
+                std::cout << "The Text Is Complete!" << std::endl;
             }
         }
 
-        std::cout << "Do you want to keep doing things or are you done" << std::endl;
-        std::cout << "0: I want to keep doing things" << std::endl;
-        std::cout << "1: Im done" << std::endl;
+        std::cout << "Would You Like To Continue?" << std::endl;
+        std::cout << "0: Yes" << std::endl;
+        std::cout << "1: No" << std::endl;
         std::cout << "Type 0, or 1: ";
         theEnd.resize(theEnd.size()+1);
         std::cin >> theEnd[theEnd.size()-1];
