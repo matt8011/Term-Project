@@ -83,7 +83,8 @@ The Prefilled Graph Will Look Like So:
 
 Visual:
 
--<img width="395" alt="Screen Shot 2023-12-04 at 10 40 13 PM" src="https://github.com/matt8011/Term-Project/assets/123590351/b5afc5ff-9fc3-46fc-99c1-0b92d1ec79cd">
+-<img width="391" alt="Screen Shot 2023-12-04 at 10 42 57 PM" src="https://github.com/matt8011/Term-Project/assets/123590351/4297b34e-70c6-4bd7-a7e6-b0988945dcbc">
+
 
 
 
