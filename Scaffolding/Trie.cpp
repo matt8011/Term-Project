@@ -140,7 +140,7 @@ std::vector<std::string> Trie::autoComp(std::string val) {
             if(temp->subs[j]->data == val[i]){
                 temp = temp->subs[j];
                 found = true;
-                if(temp->word.first) return {"The input text is a complete word"};
+                if(temp->word.first && temp->subs.empty()) return {"The input text is a complete word"};
                 break;
             }
         }
@@ -152,7 +152,7 @@ std::vector<std::string> Trie::autoComp(std::string val) {
         }
     }
     countLeaves(temp);
-    compOptions = std::vector<std::string> (autoSize, val.substr(0,valdex));
+    compOptions = std::vector<std::string> (autoSize*2, val.substr(0,valdex));
     autoSize = 0;
     compSearch(temp, autoSize, val.substr(0,valdex));
     return compOptions;
