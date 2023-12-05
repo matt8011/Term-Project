@@ -127,27 +127,27 @@ The following output file is created:
 Auto-completions:
 
 str [str] :
-	straw
-	strange
-	street
-	strong
-	structure
+straw
+strange
+street
+strong
+structure
 zqu [z] :
-	zebra
-	zero
+zebra
+zero
 po [po] :
-	pocket
-	point
-	poison
-	police
-	polite
-	pool
-	poor
-	popular
-	position
-	possible
-	potato
-	pour
-	power
+pocket
+point
+poison
+police
+polite
+pool
+poor
+popular
+position
+possible
+potato
+pour
+power
 
 *Note: Because 'zqu' is read as a typo, the autoComplete function uses backtracking to find the first substring in 'zqu' that has any type of results for an autocompletion, which in this case is 'z'* 
