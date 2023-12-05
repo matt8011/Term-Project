@@ -53,7 +53,8 @@ To commit to a user-friendly application, our code displayes a menu with options
 - **First Menu**
 - **Choice of Continuation**
 - **Access File or Input Options**
-- **File Editing Options**
+- **File Editing Options**<img width="341" alt="Screen Shot 2023-10-24 at 5 36 26 PM" src="https://github.com/matt8011/Term-Project/assets/123590351/9b3b9f63-ce27-483f-9b3a-042960c5d3c9">
+
 - **Adding/Searching/Autocompletion Options**
 
 
