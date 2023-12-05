@@ -48,6 +48,8 @@ There were no words begining with law, so the output showed words begining with 
 
 ### Menu Selection
 
+To commit to a user-friendly application, our code displayes a menu with options before and after every action made by the user, until the user quits the application. There are a wide range of options to choose from and many separate menus that will appear.
+
 - **First Menu**
 - **Choice of Continuation**
 - **Access File or Input Options**
