@@ -27,13 +27,9 @@ This can be done by putting articles, dictionaries, and texts into a .txt file. 
 5. Follow the terminal commands.
 ## Debugging and Troubleshooting
 ### Unexpected Outputs for Autocomplete:
-The autocomplete system has two features that may appear as errors.
-  - **"The input text is a complete word"**
-
-If this message appears in an autocomplete text file, the input text matches a complete word in the dictionary, and there are no longer words.
-  - **The completed words do not match the input**
-
-The output file lists a bunch of completed words, but they don't start with your input. This is because there were no words that matched the exact input. Instead, your input was shortened until there were words that started with that.
+The autocomplete system has two features that may be misconstrued as errors.
+  - **"The input text is a complete word":** If this message appears in an autocomplete text file, the input text matches a complete word in the dictionary, and there are no longer words.
+  - **The completed words do not match the input:** The output file lists a bunch of completed words, but they don't start with your input. This is because there were no words that matched the exact input. Instead, your input was shortened until there were words that started with that.
 
 For example:
 
@@ -45,10 +41,7 @@ There were no words begining with law, so the output showed words begining with 
 
 ### There is no Output File:
 
-- **"Search yielded no results":**
-
-This message only appears when searching for a word and not only does it not appear 0 times the value that would hold zero is empty. This is very rare check your search for special charcters and make sure that the tree has been filled.
-- **"Autocomplete yielded no results":**
-This message is not as rare, it appears when all words that are being autocompleted have no results. Check your search for special charcters and make sure that the tree has been filled.
+- **"Search yielded no results":** This message only appears when searching for a word and not only does it not appear 0 times the value that would hold zero is empty. This is very rare check your search for special charcters and make sure that the tree has been filled.
+- **"Autocomplete yielded no results":** This message is not as rare, it appears when all words that are being autocompleted have no results. Check your search for special charcters and make sure that the tree has been filled.
 
 ## Example Inputs and Outputs
