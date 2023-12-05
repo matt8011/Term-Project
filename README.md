@@ -132,9 +132,11 @@ strange
 street
 strong
 structure
+;
 zqu [z] :
 zebra
 zero
+;
 po [po] :
 pocket
 point
@@ -149,5 +151,9 @@ possible
 potato
 pour
 power
+
+-Actual File:
+
+-<img width="165" alt="Screen Shot 2023-12-04 at 11 34 30 PM" src="https://github.com/matt8011/Term-Project/assets/123590351/aa6fadcb-5085-4b4e-beab-3c986d7599d5">
 
 *Note: Because 'zqu' is read as a typo, the autoComplete function uses backtracking to find the first substring in 'zqu' that has any type of results for an autocompletion, which in this case is 'z'* 
