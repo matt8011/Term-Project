@@ -36,8 +36,11 @@ If this message appears in an autocomplete text file, the input text matches a c
 The output file lists a bunch of completed words, but they don't start with your input. This is because there were no words that matched the exact input. Instead your input was shortened until there were words that start with that.
 For example:
   law [la] :
+  
 	ladder
+ 
 	lady
+ 
 	lamp
 
 ### "Search Yielded No Results":
