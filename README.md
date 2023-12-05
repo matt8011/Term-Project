@@ -118,3 +118,36 @@ place was found 2 times
 
 -**Autocomplete**
 
+After prompting the following autocomplete queries:
+
+-*"str, zqu, po"*
+
+The following output file is created:
+
+Auto-completions:
+
+str [str] :
+	straw
+	strange
+	street
+	strong
+	structure
+zqu [z] :
+	zebra
+	zero
+po [po] :
+	pocket
+	point
+	poison
+	police
+	polite
+	pool
+	poor
+	popular
+	position
+	possible
+	potato
+	pour
+	power
+
+*Note: Because 'zqu' is read as a typo, the autoComplete function uses backtracking to find the first substring in 'zqu' that has any type of results for an autocompletion, which in this case is 'z'* 
