@@ -70,17 +70,20 @@ To commit to a user-friendly application, our code displayes a menu with options
 Whenever an action is performed by the user (autocomplete, search, add, etc..) an output file will be created based on the action that was prompted by the user's selection.
 
 -**Prefill**
+
 With Input Text:
 
-*"among, craft, fort, john, mine, night, us, wick, zebra"*
+-*"among, craft, fort, john, mine, night, us, wick, zebra"*
 
 
 The Prefilled Graph Will Look Like So:
-<img width="161" alt="Screen Shot 2023-12-04 at 10 40 25 PM" src="https://github.com/matt8011/Term-Project/assets/123590351/6030abb3-54f1-41df-abc6-5ff5646a93dc">
+
+-<img width="161" alt="Screen Shot 2023-12-04 at 10 40 25 PM" src="https://github.com/matt8011/Term-Project/assets/123590351/6030abb3-54f1-41df-abc6-5ff5646a93dc">
 
 
 Visual:
-<img width="395" alt="Screen Shot 2023-12-04 at 10 40 13 PM" src="https://github.com/matt8011/Term-Project/assets/123590351/b5afc5ff-9fc3-46fc-99c1-0b92d1ec79cd">
+
+-<img width="395" alt="Screen Shot 2023-12-04 at 10 40 13 PM" src="https://github.com/matt8011/Term-Project/assets/123590351/b5afc5ff-9fc3-46fc-99c1-0b92d1ec79cd">
 
 
 
