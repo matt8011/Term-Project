@@ -212,9 +212,15 @@ int main(int argc, char* argv[]) {
                 }
                     //if there aren't multiple words in the string{
                 else outy.emplace_back(line, tree.strSearch(line));
+            }bool filesGood = true;
+            if(outy.empty() || outy[0].first.empty()){
+                for(int i = 0; i < outy.size(); i++){
+                    if(!outy[i].first.empty()) break;
+                }
+                std::cout << "autocomplete yielded no results"<< std::endl;
+                filesGood = false;
             }
-            if(outy.empty()) std::cout << "search yielded no results"<< std::endl;
-            else {
+            if(filesGood) {
                 if (!secondRound)tree.searchFileWrite(ofname + "search.txt", outy);
                 else {
                     std::string ForU = "_by_file";
@@ -263,9 +269,17 @@ int main(int argc, char* argv[]) {
                 }
                     //if there aren't multiple words in the string{
                 else outy.emplace_back(line, (tree.autoComp(line)));
+            }bool filesGood = true;
+            if(outy.empty() || outy[0].second[0].empty()){
+                for(int i = 0; i < outy.size(); i++){
+                    for(int j = 0; j < outy[i].second.size(); j++){
+                        if(!outy[i].second[j].empty()) break;
+                    }
+                }
+                std::cout << "autocomplete yielded no results"<< std::endl;
+                filesGood = false;
             }
-            if(outy.empty()) std::cout << "autocomplete yielded no results"<< std::endl;
-            else{
+            if(filesGood){
                 if(!secondRound)tree.autoFileWrite(ofname + "_comp.txt", outy);
                 else{
                     std::string ForU = "_by_file";
