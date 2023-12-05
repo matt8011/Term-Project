@@ -16,8 +16,8 @@ To properly run this program, an IDE should be installed. A few local IDEs we re
 Run the following commands:
 **sudo apt-get update** and
 **sudo apt-get install g++**
-### Downloading a Library
-This can be done by implementing articles, dictionaries, and other inputs of characters in a .txt format. An example text is provided in the **Scaffolding** folder named **dictionary.txt.**
+### Using an Input File
+This can be done by putting articles, dictionaries, and texts into a .txt file. The input file can be any text you want to be autocompleted or to be used to fill the autocomplete reference text. An example text is provided in the **Scaffolding** folder named **dictionary.txt.**
 
 ## Compiling
 1. Download the following files from this repository: **main.cpp**, **Trie.cpp**, **Trie.h**. These are located in the **Scaffolding** folder. (Make sure to also download a library mentioned in the **Downloading a Library** section.)
