@@ -85,9 +85,36 @@ Visual:
 
 -<img width="391" alt="Screen Shot 2023-12-04 at 10 42 57 PM" src="https://github.com/matt8011/Term-Project/assets/123590351/4297b34e-70c6-4bd7-a7e6-b0988945dcbc">
 
+*The red pointers indicate that there is no word that ends with the next character from the character it is coming from. The blue pointers indicate that there IS a word that ends with the charcter it is being pointed to, from the character it is chained to.*
 
+
+-**Adding Words**-
+
+After adding these words to the tree:
+
+-*"place, can, trash, statement, straw, sink"*
+
+The new graph looks like this:
+
+- <img width="507" alt="Screen Shot 2023-12-04 at 11 03 51 PM" src="https://github.com/matt8011/Term-Project/assets/123590351/39448c4a-b01c-48c2-9b8d-ba498e561986">
 
 
 -**Search**
+
+After searching for the following words:
+
+-*"wick, plant, place"*
+
+The following output file is created:
+
+Search Queries and results:
+
+wick was found 1 times
+plant was found 1 times
+place was found 2 times
+
+*Note: Since wick and plant both exist in two separate databases (wick -> input.txt, plant -> dictionary in trie.h), they both are found only once. However, the word place exists in both databases, making its found value 2.*
+
+
 -**Autocomplete**
 
