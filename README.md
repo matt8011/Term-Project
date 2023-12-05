@@ -30,7 +30,16 @@ This can be done by putting articles, dictionaries, and texts into a .txt file. 
 The autocomplete system has two features that may appear as errors.
   - "The input text is a complete word"
 
-If this message is appears in an autocomplete text file, the input text matches a complete word in the dictionary
+If this message appears in an autocomplete text file, the input text matches a complete word in the dictionary, and there are no longer words.
+  - The completed words do not match the input
+
+The output file lists a bunch of completed words, but they don't start with your input. This is because there were no words that matched the exact input. Instead your input was shortened until there were words that start with that.
+For example:
+  law [la] :
+	ladder
+	lady
+	lamp
+
 ### "Search Yielded No Results":
 lorem ipsum
 ### "Autocomplete Yielded No Results":
